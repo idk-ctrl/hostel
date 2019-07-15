@@ -1,6 +1,6 @@
 <div [@routerTransition]>
-    <h2 class="text-muted">Dashboard <small>Statistics Overview</small></h2>
-    <div class="row">
+    <h2 class="text-muted">Головна сторінка</h2>
+  <!--  <div class="row">
         <div class="col-md-12">
             <ngb-carousel>
                 <ng-template ngbSlide *ngFor="let slider of sliders">
@@ -13,23 +13,26 @@
             </ngb-carousel>
         </div>
     </div>
-    <hr>
+    <hr>-->
     <div class="row">
         <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'primary'" [icon]="'fa-comments'" [count]="26" [label]="'New Comments!'" ></app-stat>
+            <app-stat [bgClass]="'info'" [icon]="'fa-comments'" [count]="1203" [label]="'Студенти'" ></app-stat>
         </div>
         <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'warning'" [icon]="'fa-tasks'" [count]="12" [label]="'New task!'" ></app-stat>
+                <app-stat [bgClass]="'warning'" [icon]="'fa-comments'" [count]="76" [label]="'Кімнати'" ></app-stat>
+            </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'secondary'" [icon]="'fa-tasks'" [count]="12" [label]="'Працівники'" ></app-stat>
         </div>
         <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'success'" [icon]="'fa-shopping-cart'" [count]="124" [label]="'New Orders!'" ></app-stat>
+            <app-stat [bgClass]="'success'" [icon]="'fa-shopping-cart'" [count]="5" [label]="'Послуги'" ></app-stat>
         </div>
         <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'danger'" [icon]="'fa-support'" [count]="13" [label]="'New Tickets!'"></app-stat>
+            <app-stat [bgClass]="'danger'" [icon]="'fa-support'" [count]="13" [label]="'Нагадування'"></app-stat>
         </div>
     </div>
     <hr />
-    <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
+   <!-- <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
     <hr />
     <div class="row">
         <div class="col-lg-8">
@@ -37,27 +40,18 @@
                 <div class="card-header">
                     <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
                 </div>
-                <!-- /.card-header -->
                 <app-timeline></app-timeline>
-                <!-- /.card-body -->
             </div>
-            <!-- /.card -->
         </div>
-        <!-- /.col-lg-8 -->
         <div class="col-lg-4">
             <div class="card card-default mb-3">
                 <div class="card-header">
                     <i class="fa fa-bell fa-fw"></i> Notifications card
                 </div>
-                <!-- /.card-header -->
                 <app-notification></app-notification>
-                <!-- /.card-body -->
             </div>
-            <!-- /.card -->
 
             <app-chat></app-chat>
-            <!-- /.card .chat-card -->
         </div>
-        <!-- /.col-lg-4 -->
-    </div>
+    </div>-->
 </div>

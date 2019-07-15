@@ -1,7 +1,35 @@
 <div [@routerTransition]>
-    <app-page-header [heading]="'Forms'" [icon]="'fa-edit'"></app-page-header>
-
+    <app-page-header [heading]="'Кімнати'" [icon]="'fa-edit'"></app-page-header>
+    <h1>1 Поверх</h1>
     <div class="row">
+    <div class="col-md-2" *ngFor="let room of userTestStatus">
+        <!--Card button delete-->
+    
+        <div appHoverImageRoom class="card card-cascade mb-2" (click)="open()">
+          
+          <!--Card image-->
+         <!-- <div class="view overlay hm-white-slight waves-light " mdbRippleRadius>
+              <img src="assets/images/StudentIcon.jpg" class="img-fluid mt-4 pl-3 pr-3" alt="">
+            <a>
+              <div class="mask mt-4"></div>
+            </a>
+          </div>-->
+          <!--/.Card image-->
+    
+          <!--Card content-->
+          <div class="card-body text-left">
+            <!--Title-->
+            <h4 class="card-title">
+            </h4>
+            <h1 style="color:green; text-align:center; font-size:18px; font-weight:bold;">  {{room.id}}</h1>
+    
+          <!--/.Card content-->
+    
+        </div>
+        <!--/.Card-->
+      </div>
+    </div>
+   <!-- <div class="row">
         <div class="col-lg-6">
 
             <form role="form">
@@ -185,7 +213,6 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">@</span>
                     </div>
-                    <!-- <span class="input-group-addon">@</span> -->
                     <input type="text" class="form-control" placeholder="Username">
                 </div>
 
@@ -226,5 +253,10 @@
 
         </div>
     </div>
-    <!-- /.row -->
+-->
+
 </div>
+
+</div>
+
+        

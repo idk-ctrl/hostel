@@ -10,6 +10,7 @@ import {
     ChatComponent
 } from './components';
 import { StatModule } from '../../shared';
+import { RoomViewModule } from 'src/app/shared/components/room/room.component.module';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import { StatModule } from '../../shared';
         NgbCarouselModule,
         NgbAlertModule,
         DashboardRoutingModule,
-        StatModule
+        StatModule,
+        RoomViewModule
     ],
     declarations: [
         DashboardComponent,

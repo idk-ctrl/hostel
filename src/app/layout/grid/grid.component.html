@@ -1,266 +1,31 @@
-<div [@routerTransition]>
-    <app-page-header [heading]="'Bootstrap Grid'" [icon]="'fa-wrench'"></app-page-header>
-
+<div class="container-fluid">
     <div class="row">
-        <div class="col-xl-12 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-12
-                </div>
-            </div>
+      <div class="col-md-3" *ngFor="let student of userTestStatus2">
+        <!--Card button delete-->
+    
+        <div appHoverImage class="card card-cascade mb-2">
+           
+          <!--Card image-->
+          <div class="view overlay hm-white-slight waves-light " mdbRippleRadius>
+              <img src="assets/images/service.png" class="img-fluid mt-4 pl-3 pr-3" alt="">
+            <a>
+              <div class="mask mt-4"></div>
+            </a>
+          </div>
+          <!--/.Card image-->
+    
+          <!--Card content-->
+          <div class="card-body text-left">
+            <!--Title-->
+            <h4 class="card-title">
+            </h4>
+            <h6 >{{student.name}}</h6>
+           
+          </div>
         </div>
+      </div>
     </div>
-    <!-- /.row -->
-
-    <div class="row">
-        <div class="col-xl-6 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-6
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-6 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-6
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <div class="row">
-        <div class="col-xl-4 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-4
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-4
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-4
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <div class="row">
-        <div class="col-xl-3 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-3
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-3
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-3
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-3
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <div class="row">
-        <div class="col-xl-2 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-2
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-2
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-2
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-2
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-2
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-2
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <div class="row">
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-1 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-1
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <div class="row">
-        <div class="col-xl-8 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-8
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-4
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <div class="row">
-        <div class="col-xl-3 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-3
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-6 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-6
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 text-xs-center">
-            <div class="card mb-3">
-                <div class="card-body">
-                    .col-xl-3
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
 </div>
+
+    
+      

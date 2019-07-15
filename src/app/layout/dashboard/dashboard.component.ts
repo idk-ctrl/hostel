@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
+import { StudentService } from 'src/app/core/services/student.service';
+import { Student } from 'src/app/core/models/student.model';
 
 @Component({
     selector: 'app-dashboard',
@@ -10,8 +12,9 @@ import { routerTransition } from '../../router.animations';
 export class DashboardComponent implements OnInit {
     public alerts: Array<any> = [];
     public sliders: Array<any> = [];
+    public student: Student[] = [];
 
-    constructor() {
+    constructor(private _studentService: StudentService) {
         this.sliders.push(
             {
                 imagePath: 'assets/images/slider1.jpg',
@@ -52,7 +55,15 @@ export class DashboardComponent implements OnInit {
         );
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        this._studentService.getResult().
+        subscribe(
+            data=>{
+                this.student=data;
+                console.log('student=', this.student);
+            }
+        )
+    }
 
     public closeAlert(alert: any) {
         const index: number = this.alerts.indexOf(alert);

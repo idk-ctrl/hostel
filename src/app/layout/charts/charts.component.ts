@@ -1,6 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 
+export class ChartModel {
+
+    public id: number;
+    public name: string;
+    public value: number;
+    constructor(id: number, name: string, value: number) {
+        this.id = id;
+        this.name = name;
+        this.value = value;
+    }
+}
+
 @Component({
     selector: 'app-charts',
     templateUrl: './charts.component.html',
@@ -13,30 +25,43 @@ export class ChartsComponent implements OnInit {
         scaleShowVerticalLines: false,
         responsive: true
     };
+    public chartModel: Array<ChartModel>;
+    public pieChartData: number[] = [300, 500, 100];
+    public pieChartLabels: string[] = [
+        'ІКНІ',
+        'ІКТА',
+        'ІІМТ',
+    ];
     public barChartLabels: string[] = [
-        '2006',
-        '2007',
-        '2008',
-        '2009',
-        '2010',
-        '2011',
-        '2012'
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9'
     ];
     public barChartType: string;
     public barChartLegend: boolean;
 
     public barChartData: any[] = [
-        { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-        { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+        { data: [65, 59, 80, 81, 56, 55, 40, 70, 12, 43], label: 'Студенти' },
     ];
 
     // Doughnut
     public doughnutChartLabels: string[] = [
-        'Download Sales',
-        'In-Store Sales',
-        'Mail-Order Sales'
+        'ІКНІ',
+        'ІКТА',
+        'ІІМТ',
+        'test',
+        'test2',
+        'test2',
+        'test2',
+        'test2'
     ];
-    public doughnutChartData: number[] = [350, 450, 100];
+    public doughnutChartData: number[] = [350, 450, 100, 200, 100, 200, 300, 455];
     public doughnutChartType: string;
 
     // Radar
@@ -56,12 +81,8 @@ export class ChartsComponent implements OnInit {
     public radarChartType: string;
 
     // Pie
-    public pieChartLabels: string[] = [
-        'Download Sales',
-        'In-Store Sales',
-        'Mail Sales'
-    ];
-    public pieChartData: number[] = [300, 500, 100];
+
+
     public pieChartType: string;
 
     // PolarArea
@@ -170,5 +191,7 @@ export class ChartsComponent implements OnInit {
         this.polarAreaChartType = 'polarArea';
         this.lineChartLegend = true;
         this.lineChartType = 'line';
+        this.chartModel = [new ChartModel(1, '23', 23), new ChartModel(2, '22', 44)];
     }
+
 }
